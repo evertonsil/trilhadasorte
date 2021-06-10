@@ -1,0 +1,49 @@
+body {
+    background-image: linear-gradient(to top, black, goldenrod, green);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    margin: 5px;
+    padding: 5px;
+    align-self: center;
+    color: black;
+    font-size: 1rem;
+}
+
+.table {
+    display: flex;
+    justify-content: center;
+    background-color: none;
+    margin: 50px auto;
+    padding: 0;
+}
+
+.table ul {
+    display: flex;
+    justify-content: center;
+    width: 58%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.table ul li {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    margin: 5px;
+    padding: 5px;
+    align-self: center;
+    color: black;
+    font-size: 1.5rem;
+    border: solid 3px black;
+    border-radius: 50px;
+}
+
+.table ul li:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+    cursor: pointer;
+}
