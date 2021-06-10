@@ -49,7 +49,7 @@
     justify-content: center;
     flex-direction: column;
     width: 320px;
-    height: auto;
+    height: 700px;
     align-items: center;
     background-color: none;
     border: solid 3px black;
@@ -85,18 +85,28 @@
     box-shadow: 0px 0px 20px 8px goldenrod;
 }
 
-
-/* 
 #pacote-premium:hover {
     z-index: 99 !important;
-    box-shadow: none !important;
-    margin-top: -10px !important;
+    margin-top: -50px !important;
     transition: 0.5s;
-} */
+}
+
+#pacote-cheap:hover {
+    z-index: 99 !important;
+    margin-top: 10px !important;
+    transition: 0.5s;
+    box-shadow: none !important;
+}
+
+#pacote-medium:hover {
+    z-index: 99 !important;
+    margin-top: 10px !important;
+    transition: 0.5s;
+    box-shadow: none !important;
+}
 
 #pacote-cheap {
     margin-right: -3px;
-    margin-top: 10px;
     border: solid 3px white !important;
     box-shadow: 0px 0px 15px 0px white;
 }
@@ -104,7 +114,6 @@
 #pacote-medium {
     margin-left: -3px;
     border: solid 3px grey !important;
-    margin-top: 10px;
     box-shadow: 0px 0px 15px 0px grey;
 }
 
