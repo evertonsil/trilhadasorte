@@ -1,3 +1,4 @@
 body {
     margin: 0 auto;
+    background-image: radial-gradient( ellipse farthest-corner at 45px 550px, #000000 0%, rgb(97 218 142) 50%, #000000 95%);
 }
