@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const Pacotes = () => (
+const Pacotes = (e) => (
   <>
     <div className="pacotes">
       <div className="title">
@@ -9,7 +9,7 @@ const Pacotes = () => (
       </div>
       <div className="all-packs">
         <div className="pacote" id="pacote-cheap">
-          <ul>
+          <ul id="id-packet-num">
             <li>X</li>
             <li>X</li>
             <li>X</li>
