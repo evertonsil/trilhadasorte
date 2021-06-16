@@ -1,11 +1,10 @@
 import React from "react";
 import "./style.css";
+import logo from "../../imgs/logo_trilha.png";
 
 const Header = () => (
   <div className="header">
-    <span>🍀</span>
-    <h1>TRILHA DA SORTE</h1>
-    <span>🍀</span>
+    <img src={logo} />
   </div>
 );
 

@@ -1,10 +1,4 @@
-body {
-    /* background-image: radial-gradient( ellipse farthest-corner at 500px 450px, #ffff80 20%, rgba(204, 153, 153, 0.4) 30%, #e6e6ff 50%); */
-    /* background-image: radial-gradient( 10000px at 10000px 50%, black 5%, goldenrod 15%, black 60%); */
-    /* background-image: radial-gradient( ellipse farthest-corner at 45px 550px, #000000 0%, rgb(97 218 142) 50%, #000000 95%); */
-}
-
-.title {
+.title h1 {
     display: flex;
     justify-content: center;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -12,7 +6,8 @@ body {
     padding: 5px;
     align-self: center;
     color: black;
-    font-size: 1rem;
+    font-size: 2rem;
+    text-align: center;
 }
 
 .table {
@@ -42,6 +37,13 @@ body {
     font-size: 1.5rem;
     border: solid 3px black;
     border-radius: 50px;
+}
+
+.table ul li:last-child {
+    font-size: 1rem;
+    padding: 10px 6px;
+    font-weight: 700;
+    -webkit-text-stroke-width: medium;
 }
 
 .table ul li:hover {

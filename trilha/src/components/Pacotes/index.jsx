@@ -1,7 +1,8 @@
 import React from "react";
 import "./style.css";
+import Numbers from "../Numbers";
 
-const Pacotes = (e) => (
+const Pacotes = (props) => (
   <>
     <div className="pacotes">
       <div className="title">
@@ -10,16 +11,13 @@ const Pacotes = (e) => (
       <div className="all-packs">
         <div className="pacote" id="pacote-cheap">
           <ul id="id-packet-num">
+            {/* <Numbers /> */}
             <li>X</li>
             <li>X</li>
             <li>X</li>
             <li>X</li>
             <li>X</li>
-            <li>X</li>
-            <li>X</li>
-            <li>X</li>
-            <li>X</li>
-            <li>X</li>
+            {/* <Numbers /> */}
           </ul>
           <h1>BARATO</h1>
           <p>10 jogos</p>
