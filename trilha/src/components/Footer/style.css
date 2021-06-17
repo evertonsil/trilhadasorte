@@ -4,9 +4,12 @@
     background-color: green;
     margin: 0;
     padding: 0;
+    height: 70px;
 }
 
 .footer img {
-    width: 10%;
+    width: 200px;
     padding: 3px;
+    position: absolute;
+    margin-top: -68px;
 }

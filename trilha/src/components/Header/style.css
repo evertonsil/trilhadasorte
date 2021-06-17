@@ -4,9 +4,11 @@
     background-color: green;
     margin: 0;
     padding: 0;
+    height: 75px;
 }
 
 .header img {
-    width: 10%;
+    width: 200px;
     padding: 3px;
+    position: absolute;
 }

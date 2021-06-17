@@ -11,7 +11,7 @@ const Pacotes = ({ numbers }) => (
       <div className="all-packs">
         <div className="pacote" id="pacote-cheap">
           <ul id="id-packet-num">
-            {numbers.slice(0, 4).map((n) => (
+            {numbers.slice(0, 5).map((n) => (
               <li>{n}</li>
             ))}
           </ul>

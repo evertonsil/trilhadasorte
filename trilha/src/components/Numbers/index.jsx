@@ -17,7 +17,7 @@ class Numbers extends Component {
       var ul = document.getElementById("test");
       ul.onclick = function (event) {
         var target = getEventTarget(event);
-        _this.props.setNumbers(_this.props.numbers.concat(target.innerHTML))
+        _this.props.setNumbers(_this.props.numbers.concat(target.innerHTML));
         // alert(target.innerHTML);
       };
     };
