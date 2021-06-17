@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import Numbers from "../Numbers";
 
-const Pacotes = ({numbers}) => (
+const Pacotes = ({ numbers }) => (
   <>
     <div className="pacotes">
       <div className="title">
@@ -11,7 +11,9 @@ const Pacotes = ({numbers}) => (
       <div className="all-packs">
         <div className="pacote" id="pacote-cheap">
           <ul id="id-packet-num">
-            {numbers.map(n => <li>{n}</li>)}            
+            {numbers.slice(0, 4).map((n) => (
+              <li>{n}</li>
+            ))}
           </ul>
           <h1>BARATO</h1>
           <p>10 jogos</p>
@@ -24,7 +26,9 @@ const Pacotes = ({numbers}) => (
 
         <div className="pacote" id="pacote-premium">
           <ul>
-          {numbers.map(n => <li>{n}</li>)}            
+            {numbers.slice(0, 19).map((n) => (
+              <li>{n}</li>
+            ))}
           </ul>
           <h1>PREMIUM</h1>
           <p>100 jogos</p>
@@ -37,21 +41,9 @@ const Pacotes = ({numbers}) => (
 
         <div className="pacote" id="pacote-medium">
           <ul>
-            <li>X</li>
-            <li>X</li>
-            <li>X</li>
-            <li>X</li>
-            <li>X</li>
-            <li>X</li>
-            <li>X</li>
-            <li>X</li>
-            <li>X</li>
-            <li>X</li>
-            <li>X</li>
-            <li>X</li>
-            <li>X</li>
-            <li>X</li>
-            <li>X</li>
+            {numbers.slice(0, 9).map((n) => (
+              <li>{n}</li>
+            ))}
           </ul>
           <h1>MEDIUM</h1>
           <p>50 jogos</p>
