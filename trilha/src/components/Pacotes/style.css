@@ -12,6 +12,9 @@
         font-size: 1rem !important;
         margin: 1px !important;
     }
+    #pacote-premium {
+        margin: 0 !important;
+    }
 }
 
 .pacotes {
@@ -19,7 +22,8 @@
     justify-content: center;
     flex-direction: column;
     padding: 50px;
-    background-image: linear-gradient(to bottom right, black, green);
+    /* background-image: radial-gradient( ellipse farthest-corner at 45px 45px, #000000 0%, rgb(97 218 142) 50%, #000000 95%); */
+    /* background-image: linear-gradient(to bottom right, black, green); */
     /* background-color: black; */
 }
 
