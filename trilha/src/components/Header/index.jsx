@@ -4,7 +4,9 @@ import logo from "../../imgs/logo_trilha.png";
 
 const Header = () => (
   <div className="header">
-    <img src={logo} />
+    <a href="/">
+      <img src={logo} />
+    </a>
   </div>
 );
 

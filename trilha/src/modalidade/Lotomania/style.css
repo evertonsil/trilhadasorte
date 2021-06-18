@@ -39,10 +39,6 @@
     margin: 10px;
 }
 
-.colum-modalidade a {
-    text-decoration: none;
-}
-
 .modalidade-1,
 .modalidade-2 {
     display: flex;

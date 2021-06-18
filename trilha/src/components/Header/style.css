@@ -7,8 +7,12 @@
     height: 75px;
 }
 
+.header a {
+    text-decoration: none;
+    padding: 0;
+}
+
 .header img {
     width: 200px;
     padding: 3px;
-    position: absolute;
 }
