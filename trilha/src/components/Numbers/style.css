@@ -1,3 +1,17 @@
+@media (max-width: 1000px) {
+    .table ul li:last-child {
+        padding: 5px 2px !important;
+        font-weight: unset !important;
+        -webkit-text-stroke-width: unset !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .table {
+        margin: 30px !important;
+    }
+}
+
 .title {
     margin-top: 5%;
 }
@@ -18,7 +32,7 @@
     display: flex;
     justify-content: center;
     background-color: none;
-    margin: 50px auto;
+    margin: 50px;
     padding: 0;
 }
 

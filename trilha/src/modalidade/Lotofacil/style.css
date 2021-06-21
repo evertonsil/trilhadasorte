@@ -39,6 +39,11 @@
     margin: 10px;
 }
 
+
+/* .colum-modalidade:hover {
+    cursor: not-allowed;
+} */
+
 .modalidade-1,
 .modalidade-2 {
     display: flex;

@@ -47,6 +47,34 @@ const Modalidades = () => {
               <span>{concdata()}</span>
             </div>
           </div>
+          <div className="colum-modalidade">
+            <a href="./Lotofacil">
+              <div className="modalidade-1" id="id-lotofacil">
+                <div className="div-img-brasil">
+                  <img src={brasil} />
+                </div>
+                <h2>Lotofácil</h2>
+              </div>
+            </a>
+            <div className="concurso">
+              <h2>Concurso</h2>
+              <span>{concdata()}</span>
+            </div>
+          </div>
+          <div className="colum-modalidade">
+            <a href="./Lotomania">
+              <div className="modalidade-2" id="id-lotomania">
+                <div className="div-img-brasil">
+                  <img src={brasil} />
+                </div>
+                <h2>Lotomania</h2>
+              </div>
+            </a>
+            <div className="concurso">
+              <h2>Concurso</h2>
+              <span>{concdata()}</span>
+            </div>
+          </div>
         </div>
       </div>
     </>
