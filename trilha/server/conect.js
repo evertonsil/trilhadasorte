@@ -2,11 +2,16 @@ var sql = require("mssql");
 
 var dbConfig = {
     server: "localhost",
-    database: "teste",
+    database: "trilha",
     user: "SA",
-    password: "Brasil2020*",
-    port: 1433
+    password: "!Diaensolarado1",
+    port: 1433,
+    options: {
+        trustServerCertificate: true
+    }
 };
+
+
 
 
 function getEmp(){
