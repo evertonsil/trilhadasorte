@@ -23,7 +23,7 @@ class Numbers extends Component {
     };
 
     return (
-      <>
+      <div>
         <header>
           <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
         </header>
@@ -153,7 +153,7 @@ class Numbers extends Component {
             <li>100</li>
           </ul>
         </div>
-      </>
+      </div>
     );
   }
 }

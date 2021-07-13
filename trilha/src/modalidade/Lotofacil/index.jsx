@@ -17,7 +17,7 @@ const Lotofacil = () => {
   const [numbers, setNumbers] = useState([]);
 
   return (
-    <>
+    <div>
       <div className="modalidades">
         {/* <div className="title-modalidade">
           <h1>ESCOLHA SUA MODALIDADE</h1>
@@ -40,7 +40,7 @@ const Lotofacil = () => {
 
       <Numbers numbers={numbers} setNumbers={setNumbers} />
       <Pacotes numbers={numbers} />
-    </>
+    </div>
   );
 };
 

@@ -18,7 +18,7 @@ const Lotomania = () => {
   const [numbers, setNumbers] = useState([]);
 
   return (
-    <>
+    <div>
       <div className="modalidades">
         {/* <div className="title-modalidade">
           <h1>ESCOLHA SUA MODALIDADE</h1>
@@ -41,7 +41,7 @@ const Lotomania = () => {
 
       <Numbers numbers={numbers} setNumbers={setNumbers} />
       <Pacotes numbers={numbers} />
-    </>
+    </div>
   );
 };
 
