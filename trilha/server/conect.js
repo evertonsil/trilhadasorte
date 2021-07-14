@@ -2,17 +2,14 @@ var sql = require("mssql");
 
 var dbConfig = {
     server: "localhost",
-    database: "trilha",
+    database: "teste",
     user: "SA",
-    password: "!Diaensolarado1",
+    password: "Brasil2020*",
     port: 1433,
     options: {
         trustServerCertificate: true
     }
 };
-
-
-
 
 function getEmp(){
     var conn = new sql.ConnectionPool(dbConfig);
@@ -23,7 +20,7 @@ function getEmp(){
             console.log(err);
             return;
         }
-        req.query("SELECT * FROM teste", function (err, recordset){
+        req.query("SELECT * FROM JOGOS_GERADOS_DIFERENTES", function (err, recordset){
             if(err){
                 console.log(err);
             }
