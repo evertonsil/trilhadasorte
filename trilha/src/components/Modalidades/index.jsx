@@ -13,7 +13,7 @@ const Modalidades = () => {
   }
 
   return (
-    <>
+    <div>
       <div className="modalidades">
         <div className="title-modalidade">
           <h1>ESCOLHA SUA MODALIDADE</h1>
@@ -77,7 +77,7 @@ const Modalidades = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

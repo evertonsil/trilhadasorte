@@ -3,7 +3,7 @@ import "./style.css";
 import Numbers from "../Numbers";
 
 const Pacotes = ({ numbers }) => (
-  <>
+  <div>
     <div className="pacotes">
       <div className="title">
         <h1>PACOTES</h1>
@@ -70,7 +70,7 @@ const Pacotes = ({ numbers }) => (
       </div> */}
       </div>
     </div>
-  </>
+  </div>
 );
 
 export default Pacotes;
