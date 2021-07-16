@@ -16,3 +16,40 @@
     width: 200px;
     padding: 3px;
 }
+
+.login-logon{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    margin:  20px;
+
+}
+
+.login-div, .logon-div{
+    margin: 0 5px;
+    transition: 0.5s;
+
+}
+
+.login-div:hover, .logon-div:hover{
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+
+.login-div p , .logon-div p{
+    margin: 0;
+    padding: 6px;
+    font-size: 1rem;
+    font-family: Cuprum, Arial, sans-serif;
+    color: white;
+    background-color: #295e21;
+    border-radius: 3px;
+}
+
+
+
