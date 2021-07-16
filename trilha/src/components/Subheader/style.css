@@ -1,34 +1,4 @@
-.header {
-    display: flex;
-    justify-content: center;
-    background-color: green;
-    margin: 0;
-    padding: 0;
-    height: 75px;
-}
 
-.header a {
-    text-decoration: none;
-    padding: 0;
-}
-
-.header img {
-    width: 200px;
-    padding: 3px;
-}
-
-
-.left-header{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-
-.right-header{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
 
 .modalidade-header{
     font-size: 1rem !important;

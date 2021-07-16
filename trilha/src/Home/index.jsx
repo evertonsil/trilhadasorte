@@ -8,11 +8,10 @@ import "./style.css";
 
 
 function Home() {
-  const [numbers, setNumbers] = useState([]);
+  // const [numbers, setNumbers] = useState([]);
   return (
     <div className="home">
-
-      <Subheader/>
+      {/* <Subheader/> */}
       <Modalidades />
       {/* <Numbers numbers={numbers} setNumbers={setNumbers} />
       <Pacotes numbers={numbers} /> */}

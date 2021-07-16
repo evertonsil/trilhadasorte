@@ -1,33 +1,59 @@
 import React from "react";
 import "./style.css";
 import logo from "../../imgs/logo_trilha.png";
+import Supheader from "../Supheader";
+
 
 
 const Header = () => (
-  <div className="header">
-    
+  <div>
+    <Supheader/>
 
-    <a href="/">
-      <img src={logo} />
-    </a>
+    <div className="header">
+      <ul>
+        <li >
+          <a href="/">
+            <img src={logo} />
+          </a>
+        </li>
+        <li >
+          <a href="/">
+            <p>Coins</p>
+          </a>
+        </li>
+        <li >
+          <a href="/">
+            <p>Sobre nós</p>
+          </a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn"><p>Modalidades</p><span id="id-span-arrow">		
+            &#9660;</span></button>
+            <div class="dropdown-content">
+              <a href="./Lotomania">Lotomania</a>
+              <a href="./Lotofacil">Lotofacil</a>
+            </div>
+          </div>
+        </li>
+        <li className="li-login-cadastro">
+          <div className="btn-login-cadastro">
+            <a href="/">
+              <p>Login</p>
+            </a>
+          </div>
+          <div className="btn-login-cadastro">
+            <a href="/">
+              <p>Cadastro</p>
+            </a>
+          </div>
+        </li>
+      </ul>
 
-   
 
-
-    <div className="login-logon">
-      <div className="login-div">
-        <p className="login-p">
-          Login
-        </p>
-      </div>
-      <div className="logon-div">
-        <p className="logon-p">
-          Cadastro
-        </p>
-      </div>
     </div>
-
   </div>
 );
+
 
 export default Header;
