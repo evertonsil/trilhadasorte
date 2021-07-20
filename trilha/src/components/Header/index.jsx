@@ -17,12 +17,12 @@ const Header = () => (
           </a>
         </li>
         <li >
-          <a href="/">
+          <a href="/Coins">
             <p>Coins</p>
           </a>
         </li>
         <li >
-          <a href="/">
+          <a href="/About">
             <p>Sobre nós</p>
           </a>
         </li>
@@ -38,12 +38,12 @@ const Header = () => (
         </li>
         <li className="li-login-cadastro">
           <div className="btn-login-cadastro">
-            <a href="/">
+            <a href="/Login">
               <p>Login</p>
             </a>
           </div>
           <div className="btn-login-cadastro">
-            <a href="/">
+            <a href="/Cadastro">
               <p>Cadastro</p>
             </a>
           </div>

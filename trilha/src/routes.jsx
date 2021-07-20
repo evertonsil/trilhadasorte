@@ -5,10 +5,22 @@ import Home from "./Home";
 import Lotomania from "./modalidade/Lotomania";
 import Lotofacil from "./modalidade/Lotofacil";
 
+import About from "./About";
+import Coins from "./Coins";
+
+import Login from "./Login";
+import Cadastro from "./Cadastro";
+
+
+
 const Routes = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Home} />
+      <Route path="/Coins" component={Coins} />
+      <Route path="/About" component={About} />
+      <Route path="/Login" component={Login} />
+      <Route path="/Cadastro" component={Cadastro} />
       <Route path="/Lotomania" component={Lotomania} />
       <Route path="/Lotofacil" component={Lotofacil} />
       <Route
