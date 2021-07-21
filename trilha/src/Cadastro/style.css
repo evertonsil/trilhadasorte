@@ -2,6 +2,10 @@
     .btns{
             justify-content: center !important;
         }
+
+    form{
+        width: 80% !important;
+    }
 }
 
 body{

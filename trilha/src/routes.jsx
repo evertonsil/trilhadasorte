@@ -10,6 +10,8 @@ import Coins from "./Coins";
 
 import Login from "./Login";
 import Cadastro from "./Cadastro";
+import Perfil from "./Perfil";
+
 
 
 
@@ -21,6 +23,7 @@ const Routes = () => (
       <Route path="/About" component={About} />
       <Route path="/Login" component={Login} />
       <Route path="/Cadastro" component={Cadastro} />
+      <Route path="/Perfil" component={Perfil} />
       <Route path="/Lotomania" component={Lotomania} />
       <Route path="/Lotofacil" component={Lotofacil} />
       <Route

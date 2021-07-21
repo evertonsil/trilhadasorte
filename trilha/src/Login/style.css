@@ -11,7 +11,9 @@
     flex-direction: column;
     width: auto;
     flex-wrap: wrap;
-    margin: 50px auto;
+    margin: 100px auto;
+    padding: 50px 0;
+
 }
 
 .login h1{

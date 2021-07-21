@@ -47,6 +47,11 @@ const Header = () => (
               <p>Cadastro</p>
             </a>
           </div>
+          <div className="btn-login-cadastro">
+            <a href="/Perfil">
+              <p>Perfil</p>
+            </a>
+          </div>
         </li>
       </ul>
 

@@ -15,12 +15,12 @@ const Pacotes = ({ numbers }) => (
               <li>{n}</li>
             ))}
           </ul>
-          <h1>BARATO</h1>
-          <p>10 jogos</p>
-          <p>5 sorteio</p>
-          <p>R$ 15,00</p>
+          <h1>PLANO BÁSICO</h1>
+          <p>Numero escolhidos ou nao</p>
+          <p>Aumente em X% suas chances</p>
+          <p>10 combinações</p>
           <button id="id-btn-comprar">
-            <a href="#">COMPRAR</a>
+            <a href="#">30 fichas</a>
           </button>
         </div>
 
@@ -30,12 +30,12 @@ const Pacotes = ({ numbers }) => (
               <li>{n}</li>
             ))}
           </ul>
-          <h1>PREMIUM</h1>
-          <p>100 jogos</p>
-          <p>50 sorteios</p>
-          <p>R$ 200,00</p>
+          <h1>PLANO PREMIUM</h1>
+          <p>Numero escolhidos ou nao</p>
+          <p>Aumente em Y% suas chances</p>
+          <p>30 combinações por jogo até o fim do mês</p>
           <button id="id-btn-comprar">
-            <a href="#">COMPRAR</a>
+            <a href="#">70 fichas</a>
           </button>
         </div>
 
@@ -45,12 +45,12 @@ const Pacotes = ({ numbers }) => (
               <li>{n}</li>
             ))}
           </ul>
-          <h1>MEDIUM</h1>
-          <p>50 jogos</p>
-          <p>25 sorteios</p>
-          <p>R$ 100,00</p>
+          <h1>PLANO MEDIUM</h1>
+          <p>Numero escolhidos ou nao</p>
+          <p>Aumente em Z% suas chances</p>
+          <p>20 combinações por jogo até o fim do mês</p>
           <button id="id-btn-comprar">
-            <a href="#">COMPRAR</a>
+            <a href="#">50 fichas</a>
           </button>
         </div>
 

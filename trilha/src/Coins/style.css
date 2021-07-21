@@ -1,8 +1,46 @@
+@media only screen and (max-width: 600px){
+    .coins ul{
+        width: 100% !important;
+    }
+}
+
 .coins{
     display: flex;
-    justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     width: auto;
     flex-wrap: wrap;
     margin: 50px auto;
+    padding: 50px 0;
+    align-items: center;
+}
+
+.coins ul{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+.coins ul li{
+    margin: 10px;
+    box-shadow:10px 10px 10px 5px black;
+    transition: 0.5s;
+}
+.coins ul li:hover{
+    box-shadow: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.pacote-coin{
+    height: 150px;
+    width: 180px;
+    border: solid 1px black;
+    text-align: center;
+    padding: 10px;
 }
