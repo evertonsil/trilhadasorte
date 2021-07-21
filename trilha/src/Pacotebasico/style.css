@@ -1,0 +1,57 @@
+@media (max-width: 600px) {
+    
+}
+
+.pacote-basico{
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    align-items: center;
+    margin: 50px auto;
+    padding: 50px 0;
+}
+
+table {
+   
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .pacote-basico table tr td {
+    justify-content: center;
+    text-align: center;
+  }
+
+
+.pacote-basico table tr td ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+}
+
+
+.pacote-basico table tr td ul li{
+    width: 50px;
+}
+
+.pacote-basico table tr td ul li input{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+
+}
