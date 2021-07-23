@@ -1,7 +1,7 @@
 var sql = require("mssql");
 
 var dbConfig = {
-    server: "DESKTOP-FVJINHE\INSTANCIA_TRILHA",
+    server: "DESKTOP-FVJINHE\\INSTANCIA_TRILHA",
     database: "LOTOMANIA_SUPER70",
     user: "SA",
     password: "Brasil2020*",
