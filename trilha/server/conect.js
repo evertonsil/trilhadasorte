@@ -1,8 +1,8 @@
 var sql = require("mssql");
 
 var dbConfig = {
-    server: "localhost",
-    database: "teste",
+    server: "DESKTOP-FVJINHE\INSTANCIA_TRILHA",
+    database: "LOTOMANIA_SUPER70",
     user: "SA",
     password: "Brasil2020*",
     port: 1433,
