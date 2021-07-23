@@ -11,7 +11,7 @@
             "program": "${workspaceFolder}/app.js",
             "request": "launch",
             "restart": true,
-            "runtimeExecutable": "/usr/bin/node",
+            "runtimeExecutable": "nodemon",
             "skipFiles": [
                 "<node_internals>/**"
             ],
