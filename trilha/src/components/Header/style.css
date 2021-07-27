@@ -11,7 +11,7 @@ display: none;
 
 .header{
   display: flex;
-  background-color: green;
+  /* background-color: green; */
   margin: 0;
   padding: 0;
   height: 50px;

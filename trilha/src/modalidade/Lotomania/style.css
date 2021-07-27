@@ -17,12 +17,6 @@
     justify-content: center;
 }
 
-.title-modalidade h1 {
-    margin: 0px 0 50px 0;
-    color: white;
-    font-family: Cuprum, Arial, sans-serif;
-    text-align: center;
-}
 
 .row-modalidade {
     display: flex;

@@ -1,4 +1,11 @@
-
+/* .sub-header{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: auto;
+    flex-wrap: wrap;
+    margin: 50px auto;
+} */
 
 .modalidade-header{
     font-size: 1rem !important;

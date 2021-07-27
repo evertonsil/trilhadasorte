@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import brasil from "../../imgs/brasil.png";
+// import testearr from "../../conect"
 
 const Modalidades = () => {
   function concdata() {
@@ -32,6 +33,27 @@ const Modalidades = () => {
               <h2>Concurso</h2>
               <span>{concdata()}</span>
             </div>
+            <div className="resultado-loteria">
+              <ul>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+              </ul>
+            </div>
           </div>
           <div className="colum-modalidade">
             <a href="./Lotomania">
@@ -45,6 +67,33 @@ const Modalidades = () => {
             <div className="concurso">
               <h2>Concurso</h2>
               <span>{concdata()}</span>
+            </div>
+            <div className="resultado-loteria">
+              <ul>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+              </ul>
             </div>
           </div>
           <div className="colum-modalidade">
@@ -60,6 +109,27 @@ const Modalidades = () => {
               <h2>Concurso</h2>
               <span>{concdata()}</span>
             </div>
+            <div className="resultado-loteria">
+              <ul>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+              </ul>
+            </div>
           </div>
           <div className="colum-modalidade">
             <a href="./Lotomania">
@@ -73,6 +143,33 @@ const Modalidades = () => {
             <div className="concurso">
               <h2>Concurso</h2>
               <span>{concdata()}</span>
+            </div>
+            <div className="resultado-loteria">
+              <ul>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+                <li>00</li>
+              </ul>
             </div>
           </div>
         </div>

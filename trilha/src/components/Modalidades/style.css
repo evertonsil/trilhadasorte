@@ -20,8 +20,9 @@
 .title-modalidade h1 {
     margin: 0px 0 50px 0;
     color: white;
-    font-family: Cuprum, Arial, sans-serif;
+    font-family: fantasy;
     text-align: center;
+    font-size: 3rem;
 }
 
 .row-modalidade {
@@ -34,7 +35,7 @@
 .colum-modalidade {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     padding: 10px;
     margin: 10px;
@@ -120,4 +121,29 @@
     font-family: Cuprum, Arial, sans-serif;
     color: #7c9b85;
     margin: 0 5px;
+}
+
+.resultado-loteria{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 280px;
+}
+
+
+.resultado-loteria ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.resultado-loteria ul li{
+    margin: 5px;
+    padding: 5px;
+    font-size: 2rem;
+
 }

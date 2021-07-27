@@ -9,6 +9,7 @@
             "internalConsoleOptions": "neverOpen",
             "name": "node",
             "program": ".\\server\\conect.js",
+            // "program": "index.js",
             "request": "launch",
             "restart": true,
             "runtimeExecutable": "node",

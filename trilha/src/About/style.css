@@ -4,5 +4,6 @@
     flex-direction: row;
     width: auto;
     flex-wrap: wrap;
-    margin: 50px auto;
+    margin: 150px auto;
+    padding: 54px 0;
 }
