@@ -6,6 +6,7 @@ import Numbers from "../components/Numbers";
 import Pacotes from "../components/Pacotes";
 import "./style.css";
 
+// import bank from "../../server/conect"
 
 function Home() {
   // const [numbers, setNumbers] = useState([]);
