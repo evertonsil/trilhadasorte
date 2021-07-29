@@ -4,7 +4,9 @@ import logo from "../../imgs/logo_trilha.png";
 
 const Footer = () => (
   <div className="footer">
-    <img src={logo} />
+    <a href="/">
+      <img src={logo} />
+    </a>
     <div className="subfooter">
 
     <ul>

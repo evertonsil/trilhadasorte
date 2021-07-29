@@ -10,11 +10,16 @@
     width: 100%;
 }
 
-.footer img {
+.footer a{
+}
+
+.footer img{
     width: 200px;
     padding: 3px;
     position: absolute;
-    margin-top: -68px;
+    margin: -70px auto;
+    left: 0;
+    right: 0;
 }
 
 
