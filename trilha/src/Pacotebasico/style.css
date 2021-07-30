@@ -1,11 +1,13 @@
 @media (max-width: 600px) {
-    
+    .pacote-basico table tr td ul{
+      justify-content: center;
+    }
 }
 
 .pacote-basico{
     display: flex;
     justify-content: center;
-    width: 75%;
+    width: 84%;
     align-items: center;
     margin: 50px auto;
     padding: 50px 0;
@@ -20,13 +22,16 @@ table {
   }
   
   td, th {
-    border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+    border: solid 0.1px rgba(51, 51, 51, 0.5);
   }
-  
+  tr:nth-child(odd) {
+    /* background-color: teal; */
+  }
+
   tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #1f9cb2;
   }
 
   .pacote-basico table tr td {
@@ -34,6 +39,9 @@ table {
     text-align: center;
   }
 
+  .pacote-basico table tr th:last-child {
+    text-align: center;
+  }
 
 .pacote-basico table tr td ul{
     display: flex;
@@ -41,17 +49,28 @@ table {
     margin: 0;
     padding: 0;
     list-style: none;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 
 .pacote-basico table tr td ul li{
-    width: 50px;
+    width: auto;
+    text-align: center;
 }
 
 .pacote-basico table tr td ul li input{
-    width: 40px;
-    height: 40px;
-    margin: 5px;
+  width: 40px;
+  height: 40px;
+  margin: 6px;
+  border-radius: 10px;
+  text-align: center;
+  border: none !important;
+  outline: none !important;
+  
+}
+
+.pacote-basico table tr td ul li input:focus{
+  border: none !important;
+  outline: none !important;
 
 }

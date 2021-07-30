@@ -20,3 +20,13 @@
     display: flex;
     margin: 0 auto;
 }
+
+form a{
+    text-decoration: none;
+    color: blue;
+}
+
+form a:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+}

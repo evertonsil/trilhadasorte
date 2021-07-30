@@ -4,350 +4,595 @@ import brasil from "../imgs/brasil.png";
 import Numbers from "../components/Numbers";
 import Pacotes from "../components/Pacotes";
 
-const PacoteBasico = () => {
-  function concdata() {
-    let newDate = new Date();
-    let date = newDate.getDate();
-    let month = newDate.getMonth() + 1;
-    let year = newDate.getFullYear();
-
-    return `${date}/${month < 10 ? `0${month}` : ` ${month}`}/${year}`;
-  }
-
-  const [numbers, setNumbers] = useState([]);
-
-  return (
+const PacoteBasico = ({ numbers }) => (
+  <div>
     <div className="pacote-basico">
      <table>
   <tr>
-    <th>Selecione até 19 números:</th>
-    <th>Completar todos</th>
+    <th>Selecione até 19 números entre 01 e 25:</th>
+    <th>Completar todos <input type="checkbox"/></th>
   </tr>
   <tr>
     <td>
       <ul>
         <li>
-          <input max="100"type="number"/>
+          {/* <input max="25" type="number" value={numbers.map((n) => n)}/>  */}
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
       </ul>
       </td>
-    <td><input max="100"type="checkbox"/></td>
+    <td><input type="checkbox"/></td>
   </tr>
   <tr>
   <td>
       <ul>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
       </ul>
       </td>
-    <td><input max="100"type="checkbox"/></td>
+    <td><input type="checkbox"/></td>
   </tr>
   <tr>
   <td>
       <ul>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
       </ul>
       </td>
-    <td><input max="100"type="checkbox"/></td>
+    <td><input type="checkbox"/></td>
   </tr>
   <tr>
   <td>
       <ul>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
       </ul>
       </td>
-    <td><input max="100"type="checkbox"/></td>
+    <td><input type="checkbox"/></td>
   </tr>
   <tr>
   <td>
       <ul>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
         </li>
       </ul>
       </td>
-    <td><input max="100"type="checkbox"/></td>
+    <td><input type="checkbox"/></td>
   </tr>
   <tr>
   <td>
       <ul>
         <li>
-          <input max="100"type="number"/>
+          <input max="25"type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+      </ul>
+      </td>
+    <td><input type="checkbox"/></td>
+  </tr>
+  <tr>
+  <td>
+      <ul>
+        <li>
+          <input max="25"type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+      </ul>
+      </td>
+    <td><input type="checkbox"/></td>
+  </tr>
+  <tr>
+  <td>
+      <ul>
+        <li>
+          <input max="25"type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+      </ul>
+      </td>
+    <td><input type="checkbox"/></td>
+  </tr>
+  <tr>
+  <td>
+      <ul>
+        <li>
+          <input max="25"type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+        <li>
+          <input type="number"/>
+        </li>
+      </ul>
+      </td>
+    <td><input type="checkbox"/></td>
+  </tr>
+  <tr>
+  <td>
+      <ul>
+        <li>
+          <input max="25"type="number"/>
         </li>
         <li>
           <input type="number"/>
@@ -409,7 +654,8 @@ const PacoteBasico = () => {
   </tr>
 </table>
     </div>
-  );
-};
+    </div>
+  
+);
 
 export default PacoteBasico;

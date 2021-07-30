@@ -4,8 +4,9 @@ import Subheader from "../components/Subheader";
 import Numbers from "../components/Numbers";
 import Pacotes from "../components/Pacotes";
 import "./style.css";
-import Btncancel from "../components/BtnCancel";
-import Btnok from "../components/BtnOk";
+import Btncancel from "../components/Buttons/BtnCancel";
+import Btnok from "../components/Buttons/BtnOk";
+import BtnCadastro from "../components/Buttons/BtnCadastro";
 
 
 function Cadastro() {
@@ -23,35 +24,35 @@ function Cadastro() {
       <form>
         <div className="div-input">
           <label>Nome Completo</label>
-          <input type="text" placeholder="nome" name="nome"/>
+          <input type="text" placeholder=" nome" name="nome"/>
         </div>
         <div className="div-input">
           <label>Email</label>
-          <input type="email" placeholder="email" name="email"/>
+          <input type="email" placeholder=" email" name="email"/>
         </div>
         <div className="div-input">
           <label>CPF</label>
-          <input type="text" placeholder="cpf" name="cpf"/>
+          <input type="text" placeholder=" cpf" name="cpf"/>
         </div>
         <div className="div-input">
           <label>Data de nascimento</label>
-          <input type="text" placeholder="birthday" name="birthday"/>
+          <input type="text" placeholder=" birthday" name="birthday"/>
         </div>
         <div className="div-input">
           <label>Whatsapp</label>
-          <input type="text" id="phoneWhatsapp" placeholder="(XX) 9 XXXX-XXXX" name="whatsapp"/>
+          <input type="text" id="phoneWhatsapp" placeholder=" (XX) 9 XXXX-XXXX" name="whatsapp"/>
         </div>
         <div className="div-input">
           <label>Senha</label>
-          <input type="password" placeholder="insira uma senha segura" name="senha"/>
+          <input type="password" placeholder=" insira uma senha segura" name="senha"/>
         </div>
         <div className="div-input">
           <label>Repita a senha</label>
-          <input type="password" placeholder="Repita a senha" name="senhaconfirm"/>
+          <input type="password" placeholder=" Repita a senha" name="senhaconfirm"/>
         </div>
         <div className="div-input">
           <label>CEP</label>
-          <input type="text" placeholder="XXXXX-XXX" name="whatsapp"/>
+          <input type="text" placeholder=" XXXXX-XXX" name="whatsapp"/>
         </div>
         <div className="div-input">
           <label>Estado</label>
@@ -88,7 +89,7 @@ function Cadastro() {
         </div>
         <div className="btns">
         <Btncancel/>
-        <Btnok/>
+        <BtnCadastro/>
         </div>
 
       </form>
