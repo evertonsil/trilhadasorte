@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import Numbers from "../Numbers";
+// import Numbers from "../Numbers";
 
 const Pacotes = ({ numbers }) => (
   <div>
@@ -15,7 +15,7 @@ const Pacotes = ({ numbers }) => (
           </div>
           <div className="pacote-cheap-body">
             <ul id="id-packet-num">
-              {numbers.slice(0, 5).map((n) => (
+              {numbers.slice(0, 19).map((n) => (
                 <li>{n}</li>
               ))}
             </ul>
@@ -56,7 +56,7 @@ const Pacotes = ({ numbers }) => (
           </div>
           <div className="pacote-premium-body">
             <ul>
-              {numbers.slice(0, 9).map((n) => (
+              {numbers.slice(0, 19).map((n) => (
                 <li>{n}</li>
               ))}
             </ul>
@@ -70,15 +70,6 @@ const Pacotes = ({ numbers }) => (
           </div>
         </div>
       </div>
-
-      <div className="num-selected">
-        <h1>Se clicar para comprar o pacote básico</h1>
-                  <ul>
-                    <li>Selecione até 19 numeros <button>completar</button></li>
-                    <li>Numeros escolhidos <button>completar</button></li>
-                    <li>Selecione até 19 numeros <button>completar</button></li>
-                  </ul>
-                </div>
     </div>
   </div>
 );

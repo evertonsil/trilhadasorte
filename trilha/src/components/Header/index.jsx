@@ -38,17 +38,20 @@ const Header = () => (
         </li>
         <li className="li-login-cadastro">
           <div className="btn-login-cadastro">
-            <a href="/Login">
+            {/* <a href="/Login"> */}
+            <a href="https://speeak.digital/sites/loja.trilhadasorte.com.br/login">
               <p>Login</p>
             </a>
           </div>
           <div className="btn-login-cadastro">
-            <a href="/Cadastro">
+            {/* <a href="/Cadastro"> */}
+            <a href="https://speeak.digital/sites/loja.trilhadasorte.com.br/cadastro">
               <p>Cadastro</p>
             </a>
           </div>
           <div className="btn-login-cadastro">
-            <a href="/Perfil">
+            {/* <a href="/Perfil"> */}
+            <a href="https://speeak.digital/sites/loja.trilhadasorte.com.br/minha-conta">
               <p>Perfil</p>
             </a>
           </div>
