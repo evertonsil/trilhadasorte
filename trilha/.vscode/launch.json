@@ -8,9 +8,44 @@
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "name": "node",
-            // "program": ".\\server\\api.js",
-            // "program": ".\\server\\conect.js",
-            "program": "index.js",
+             "program": ".\\src\\server\\api.js",
+            // "program": ".\\src\\server\\conect.js",
+            // "program": "index.js",
+                // PARA CONECTAR COM O BANCO DE DADOS
+                // ABRA O BANCO DE DADOS E CONECTA, DEPOIS DESCOMENTE UMA DAS LINHAS 11, 12, 13
+                // DEPOIS EXECUTE OS CÓDIGOS ABAIXO EM ORDEM UM POR UM NO POWER SHELL  
+                //1-             sqlps
+
+                // # Get a reference to the ManagedComputer class.
+                // 2-       CD SQLSERVER:\SQL\DESKTOP-FVJINHE
+
+                // 3-       $Wmi = (get-item .).ManagedComputer
+
+                // 4-       $DfltInstance = $Wmi.Services['MSSQLSERVER']
+
+                // 5-       $DfltInstance = $Wmi.Services['MSSQL$INSTANCIA_TRILHA']
+
+                // 6-       $DfltInstance = $Wmi.Services['INSTANCIA_TRILHA']
+
+                // 7-       $DfltInstance = $Wmi.Services['SQLAGENT$INSTANCIA_TRILHA']
+
+                //8- 
+                // # Display the state of the service.
+                // $DfltInstance
+                // # Start the service.
+                // $DfltInstance.Start();
+                // # Wait until the service has time to start.
+                // # Refresh the cache.  
+                // $DfltInstance.Refresh();
+                // # Display the state of the service.
+                // $DfltInstance
+                // # Stop the service.
+                // $DfltInstance.Stop();
+                // # Wait until the service has time to stop.
+                // # Refresh the cache.
+                // $DfltInstance.Refresh();
+                // # Display the state of the service.
+                // $DfltInstance
             "request": "launch",
             "restart": true,
             "runtimeExecutable": "node",

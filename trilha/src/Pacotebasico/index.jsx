@@ -11,7 +11,7 @@ const PacoteBasico = ({ numbers, n  }) => {
   const above26 = () =>{
     const usrInput = document.getElementById("usrInput"); 
     if( usrInput.value >= 26 ){
-      // alert('coloque um número entre 1 e 25');
+      alert('coloque um número entre 1 e 25');
       usrInput.addEventListener("focus", function () {
         this.style.boxShadow = "0 0 0 2pt red";  
       });

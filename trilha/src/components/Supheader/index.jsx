@@ -1,10 +1,18 @@
 import React from "react";
 import "./style.css";
 
-const Supheader = () => (
+import Lastresulsts from "../../server/lastresults";
+
+// dboperations.getLastresults().then(result => {
+//     console.log(result);
+// })
+
+
+const Supheader = ({Lastresulsts}) => (
   <div className="sup-header">
-     <marquee><p>Lotofácil | Concurso 2282 1 2 4 5 6 10 11 12 13 14 18 20 21 23 24</p></marquee>
+     <marquee><p>Lotofácil | <a href="#">Concurso 2282</a> {(Lastresulsts)}1 2 4 5 6 10 11 12 13 14 18 20 21 23 24</p></marquee>
   </div>
 );
+
 
 export default Supheader;

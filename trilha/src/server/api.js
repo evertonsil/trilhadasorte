@@ -1,5 +1,5 @@
-var Lastresulsts = require('./lastresults');
-var Jogosbons = require('./jogosbons');
+// var Lastresulsts = require('./lastresults');
+// var Jogosbons = require('./jogosbons');
 
 const dboperations = require('./dboperations');
 

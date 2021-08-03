@@ -68,17 +68,16 @@ var dbConfig = {
     }
 };
 
-module.exports = dbConfig;
 
 function getEmp(){
     var conn = new sql.ConnectionPool(dbConfig);
     var req = new sql.Request(conn);
-
-    conn.connect(function (err){
-        if (err) {
-            console.log(err);
-            return;
-        }
+    
+    // conn.connect(function (err){
+        //     if (err) {
+            //         console.log(err);
+            //         return;
+    //     }
     //     req.query("SELECT * FROM dbo.RESULTADOS_ANTERIORES$ ORDER BY ID_RESULTADO OFFSET 50 ROWS FETCH NEXT 10 ROWS ONLY", function (err, recordset){
     //         if(err){
     //             console.log(err);
@@ -89,19 +88,22 @@ function getEmp(){
     //         conn.close();
     //         return recordset
     // });
+    
+    //     req.query("SELECT * FROM dbo.Jogos_bons$ ORDER BY ID_RESULTADO OFFSET 50 ROWS FETCH NEXT 70 ROWS ONLY", function (err, recordset){
+        //         if(err){
+    //             console.log(err);
+    //         }
+    //         else {
+        //             console.log(recordset);
+        //         }
+        //         conn.close();
+        //         return recordset
+        // });
 
-//     req.query("SELECT * FROM dbo.Jogos_bons$ ORDER BY ID_RESULTADO OFFSET 50 ROWS FETCH NEXT 70 ROWS ONLY", function (err, recordset){
-//         if(err){
-//             console.log(err);
-//         }
-//         else {
-//             console.log(recordset);
-//         }
-//         conn.close();
-//         return recordset
-// });
+        // });
 
-});
-
+        
+        
 }
+module.exports = dbConfig;
   getEmp();

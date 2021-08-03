@@ -31,3 +31,5 @@ class Lastresulsts{
 }
 
 module.export = Lastresulsts;
+
+export default Lastresulsts;

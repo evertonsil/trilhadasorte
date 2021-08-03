@@ -2,8 +2,10 @@ import React from "react";
 import "./style.css";
 import brasil from "../../imgs/brasil.png";
 // import testearr from "../../conect"
+// var config = require('../../server/conect');
+// const sql = require('mssql');
 
-const Modalidades = () => {
+const Modalidades = ({numbers}) => {
   function concdata() {
     let newDate = new Date();
     let date = newDate.getDate();
@@ -35,6 +37,9 @@ const Modalidades = () => {
             </div>
             <div className="resultado-loteria">
               <ul>
+              {/* {numbers.slice(0, 19).map((n) => (
+                <li>{n}</li>
+              ))} */}
                 <li>00</li>
                 <li>00</li>
                 <li>00</li>

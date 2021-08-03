@@ -22,10 +22,13 @@ async function getJogosbons(){
     catch(error){
         console.log(error);
     }
+    
 }
 
 
-module.exports  = {
+module.exports =  {
     getLastresults : getLastresults,
     getJogosbons : getJogosbons
 }
+
+export default getJogosbons;
