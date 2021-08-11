@@ -17,7 +17,8 @@ const Header = () => (
           </a>
         </li>
         <li >
-          <a href="/Coins">
+          {/* <a href="/Coins"> */}
+          <a href="https://speeak.digital/sites/loja.trilhadasorte.com.br/shop/">
             <p>Coins</p>
           </a>
         </li>
@@ -31,7 +32,7 @@ const Header = () => (
             <button class="dropbtn"><p>Modalidades</p><span id="id-span-arrow">		
             &#9660;</span></button>
             <div class="dropdown-content">
-              <a href="./Lotomania">Lotomania</a>
+              {/* <a href="./Lotomania">Lotomania</a> */}
               <a href="./Lotofacil">Lotofacil</a>
             </div>
           </div>

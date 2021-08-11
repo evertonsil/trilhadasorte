@@ -8,6 +8,8 @@ import BtnOk from "../components/Buttons/BtnOk"
 const PacoteBasico = ({ numbers, n  }) => {
 
 
+
+
   const above26 = () =>{
     const usrInput = document.getElementById("usrInput"); 
     if( usrInput.value >= 26 ){
@@ -30,7 +32,8 @@ const PacoteBasico = ({ numbers, n  }) => {
     <th>Completar todos<input id="Allchecks" type="checkbox" onClick={()=>{
       const inputscheck = document.getElementsByName("testcheck");
       inputscheck.checked == true
-    }} /></th>
+      }} />
+    </th>
   </tr>
   <tr>
     <td>

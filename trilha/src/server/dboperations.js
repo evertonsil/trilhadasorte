@@ -31,4 +31,4 @@ module.exports =  {
     getJogosbons : getJogosbons
 }
 
-export default getJogosbons;
+// export default getLastresults;
