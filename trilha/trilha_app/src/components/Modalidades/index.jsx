@@ -6,7 +6,7 @@ import axios from "axios";
 function Modalidades () {
   const [game, setGame] = useState([]);
   function getLastresults(){
-    axios.get("http://172.20.10.249:3010/game/lastresult").then(
+    axios.get("http://localhost:3000/game/lastresult").then(
       response => {
         console.log(response.data);
         setGame(Object.keys(response.data[0][0]).map(key => response.data[0][0][key]))
