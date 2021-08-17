@@ -1,11 +1,22 @@
-import React from "react";
+import React, {useState, useEffect } from "react";
 import "./style.css";
 import brasil from "../../imgs/brasil.png";
-// import testearr from "../../conect"
-// var config = require('../../server/conect');
-// const sql = require('mssql');
+import axios from "axios";
 
-const Modalidades = ({numbers}) => {
+function Modalidades () {
+  const [game, setGame] = useState([]);
+  function getLastresults(){
+    axios.get("http://172.20.10.249:3010/game/lastresult").then(
+      response => {
+        console.log(response.data);
+        setGame(Object.keys(response.data[0][0]).map(key => response.data[0][0][key]))
+      }
+    )
+  }
+  useEffect(function(){
+    getLastresults()
+  }, [])
+
   function concdata() {
     let newDate = new Date();
     let date = newDate.getDate();
@@ -14,6 +25,9 @@ const Modalidades = ({numbers}) => {
 
     return `${date}/${month < 10 ? `0${month}` : ` ${month}`}/${year}`;
   }
+
+
+  
 
   return (
     <div>
@@ -36,28 +50,9 @@ const Modalidades = ({numbers}) => {
               <span>{concdata()}</span>
             </div>
             <div className="resultado-loteria">
-              <ul>
-              {/* {numbers.slice(0, 19).map((n) => (
-                <li>{n}</li>
-              ))} */}
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-              </ul>
+                      <ul>
+                         {game.map(g => <li>{g}</li>)}
+                      </ul>
             </div>
           </div>
           <div className="colum-modalidade">
@@ -101,7 +96,7 @@ const Modalidades = ({numbers}) => {
               </ul>
             </div>
           </div>
-          <div className="colum-modalidade">
+          {/* <div className="colum-modalidade">
             <a href="./Lotofacil">
               <div className="modalidade-1" id="id-lotofacil">
                 <div className="div-img-brasil">
@@ -176,7 +171,7 @@ const Modalidades = ({numbers}) => {
                 <li>00</li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -39,7 +39,6 @@ function Home() {
     <div className="home">
       {/* <Subheader/> */}
       <Modalidades />
-      {game.map(g => <p>{g}</p>)}
       {/* {dboperations} */}
       {/* <Numbers numbers={numbers} setNumbers={setNumbers} />
       <Pacotes numbers={numbers} /> */}

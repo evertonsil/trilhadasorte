@@ -7,4 +7,6 @@ body {
     /* background-image: linear-gradient( 45deg, #1a1815 25%, #000000 25%, #000000 50%, #1a1815 50%, #1a1815 75%, #000000 75%, #000000 100%);
     background-size: 56.57px 56.57px; */
     background-image: linear-gradient(45deg, teal 50%, #1f9cb2 50%);
+    background-repeat: no-repeat;
+    /* contain: content; */
 }

@@ -127,7 +127,7 @@
     display: flex;
     margin: 0;
     padding: 0;
-    width: 280px;
+    width: 300px;
 }
 
 
@@ -142,8 +142,12 @@
 }
 
 .resultado-loteria ul li{
+    display: flex;
+    justify-content: center;
     margin: 5px;
     padding: 5px;
     font-size: 2rem;
+    width: 40px;
+    text-align: center;
 
 }

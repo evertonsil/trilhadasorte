@@ -11,6 +11,7 @@
 .sup-header p{
     margin: 5px;
     padding: 0;
+    display: flex;
 }
 
 .sup-header p a{
@@ -24,3 +25,15 @@
     cursor: pointer;
 }
 
+.sup-header marquee p ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-direction: row;
+}
+
+.sup-header marquee p ul li{
+    margin: auto 5px;
+    padding: 0 5px;
+}

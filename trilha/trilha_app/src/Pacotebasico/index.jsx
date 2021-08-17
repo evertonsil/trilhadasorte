@@ -5,10 +5,11 @@ import Numbers from "../components/Numbers";
 import Pacotes from "../components/Pacotes";
 import BtnOk from "../components/Buttons/BtnOk"
 
-const PacoteBasico = ({ numbers, n  }) => {
+const PacoteBasico = ({n}) => {
 
+  const [numbers, setNumbers] = useState([]);
 
-
+  // const numchoosed = "setNumbers";
 
   const above26 = () =>{
     const usrInput = document.getElementById("usrInput"); 
@@ -37,7 +38,7 @@ const PacoteBasico = ({ numbers, n  }) => {
       <ul>
         <li>
            {/* onInput={() => {this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')}}  */}
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/> 
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"  onKeyPress={above26}/> 
         </li>
         <li>
           <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
