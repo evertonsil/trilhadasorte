@@ -1,8 +1,7 @@
-var sql = require("mssql");
 
 // var dbConfig = {
-//         server: "mychooice.com.br",
-//         database: "mychoo70_trilhadasorte",
+    //         server: "mychooice.com.br",
+    //         database: "mychoo70_trilhadasorte",
 //         user: "mychoo70_trilhadasorte",
 //         password: "{XKzyP60Z0[c",
 //         port: 3306,
@@ -11,6 +10,7 @@ var sql = require("mssql");
 //         }
 //     };
 
+var sql = require("mssql");
 
 var dbConfig = {
     server: "DESKTOP-FVJINHE",

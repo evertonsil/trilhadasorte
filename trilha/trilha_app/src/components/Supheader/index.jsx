@@ -7,12 +7,12 @@ import axios from "axios";
 function Supheader(){
   const [game, setGame] = useState([]);
   function getLastresults(){
-    axios.get("http://localhost:3000/game/lastresult").then(
+    axios.get("http://localhost:3010/game/lastresult").then(
       // axios.get("http://localhost:3010/game/cltescolhefacil").then(
-    // axios.get("http://172.20.10.249:3000/game/getjogosbons").then(
+    // axios.get("http://localhost:3010/game/getjogosbons").then(
        response => {
          console.log(response.data);
-        // setGame(Object.keys(response.data[0][0]).map(key => response.data[0][0][key]))
+         setGame(Object.keys(response.data[0][0]).map(key => response.data[0][0][key]))
       }
     )
   }
