@@ -12,7 +12,7 @@ function Supheader(){
     // axios.get("http://172.20.10.249:3000/game/getjogosbons").then(
        response => {
          console.log(response.data);
-        setGame(Object.keys(response.data[0][0]).map(key => response.data[0][0][key]))
+        // setGame(Object.keys(response.data[0][0]).map(key => response.data[0][0][key]))
       }
     )
   }
