@@ -6,11 +6,11 @@ import axios from "axios";
 function Modalidades () {
   const [game, setGame] = useState([]);
   function getLastresults(){
-    axios.get("http://localhost:3010/game/lastresult").then(
+    axios.get("http://localhost:3010/game/cltescolhefacil").then(
       response => {
-        console.log(response.data);
-        setGame(Object.keys(response.data[0][0]).map(key => response.data[0][0][key]))
-      }
+        console.log(response.data + "console teste modalidades");
+        // setGame(Object.keys(response.data[0][0]).map(key => response.data[0][0][key]))
+        }
     )
   }
   useEffect(function(){

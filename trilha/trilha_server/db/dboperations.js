@@ -1,5 +1,6 @@
 var config = require('./conect');
 var sql = require("mssql");
+// var sql = require("mysql");
 
 
 async function getPuroosso(){
@@ -12,7 +13,7 @@ async function getPuroosso(){
 async function getLastresults(){
     try{
         let pool = await sql.connect(config)
-        let numbs = pool.request().query("SELECT * FROM dbo.RESULTADOS_ANTERIORES$ ORDER BY ID_RESULTADO 50 ROWS FETCH NEXT 1 ROWS ONLY");
+        let numbs = pool.request().query("SELECT * FROM dbo.RESULTADOS_ANTERIORES$ ORDER BY ID_RESULTADO");
         return (await numbs).recordsets;
    }
     catch(error){
@@ -23,7 +24,7 @@ async function getLastresults(){
 async function getClt_escolhe_facil(){
     try{
         let pool = await sql.connect(config)
-        let numbs = pool.request().query("Call cliente_escolhe_facil(5,15,25)");
+        let numbs = pool.request().query("Call cliente_escolhe_facil(y,15x,25bruh)");
         return (await numbs).recordsets;
    }
     catch(error){
@@ -35,7 +36,7 @@ async function getClt_escolhe_facil(){
 async function getJogosbons(){
     try{
         let pool = await sql.connect(config)
-        let numbs = pool.request().query("SELECT * FROM dbo.Jogos_bons$ ORDER BY ID_RESULTADO OFFSET 50 ROWS FETCH NEXT 1 ROWS ONLY");
+        let numbs = pool.request().query("SELECT * FROM dbo.Jogos_bons$ ORDER BY ID_RESULTADO");
         return (await numbs).recordsets;
    }
     catch(error){
