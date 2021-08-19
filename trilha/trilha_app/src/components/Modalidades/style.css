@@ -41,6 +41,11 @@
     margin: 10px;
 }
 
+#id-colum-modalidade-lotomania{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 .colum-modalidade a {
     text-decoration: none;
 }

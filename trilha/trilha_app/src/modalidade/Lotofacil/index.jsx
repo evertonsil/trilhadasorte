@@ -34,34 +34,36 @@ function Lotofacil(){
 
   return (
     <div>
-      <div className="modalidades">
-        {/* <div className="title-modalidade">
-          <h1>ESCOLHA SUA MODALIDADE</h1>
-        </div> */}
-        <div className="row-modalidade">
-          <div className="colum-modalidade">
-            <div className="modalidade-1" id="id-lotofacil">
-              <div className="div-img-brasil">
-                <img src={brasil} />
+        <div className="all-lotofacil">
+          <div className="modalidades">
+            {/* <div className="title-modalidade">
+              <h1>ESCOLHA SUA MODALIDADE</h1>
+            </div> */}
+            <div className="row-modalidade">
+              <div className="colum-modalidade">
+                <div className="modalidade-1" id="id-lotofacil">
+                  <div className="div-img-brasil">
+                    <img src={brasil} />
+                  </div>
+                  <h2>Lotofácil</h2>
+                </div>
+                <div className="concurso">
+                  <h2>Concurso</h2>
+                  <span>{concdata()}</span>
+                </div>
+                <div className="resultado-loteria">
+                          <ul>
+                            {game.map(g => <li>{g}</li>)}
+                          </ul>
+                </div>
               </div>
-              <h2>Lotofácil</h2>
-            </div>
-            <div className="concurso">
-              <h2>Concurso</h2>
-              <span>{concdata()}</span>
-            </div>
-            <div className="resultado-loteria">
-                      <ul>
-                         {game.map(g => <li>{g}</li>)}
-                      </ul>
             </div>
           </div>
-        </div>
-      </div>
 
-      <Numbers numbers={numbers} setNumbers={setNumbers} />
-      <Pacotes numbers={numbers} />
-    </div>
+          <Numbers numbers={numbers} setNumbers={setNumbers} />
+        </div>
+          <Pacotes numbers={numbers} />
+      </div>
   );
 };
 

@@ -21,16 +21,16 @@ async function getLastresults(){
     }
 }
 
-async function getClt_escolhe_facil(){
-    try{
-        let pool = await sql.connect(config)
-        let numbs = pool.request().query("Call cliente_escolhe_facil(y,15x,25bruh)");
-        return (await numbs).recordsets;
-   }
-    catch(error){
-        console.log(error);
-    }
-}
+// async function getClt_escolhe_facil(){
+//     try{
+//         let pool = await sql.connect(config)
+//         let numbs = pool.request().query("SELECT * FROM HISTORICO_BASE_LOTOFACIL order by ID_RESULTADO");
+//         return (await numbs).recordsets;
+//    }
+//     catch(error){
+//         console.log(error);
+//     }
+// }
 
 
 async function getJogosbons(){
@@ -50,7 +50,7 @@ module.exports =  {
     getPuroosso : getPuroosso,
     getLastresults : getLastresults,
     getJogosbons : getJogosbons,
-    getClt_escolhe_facil : getClt_escolhe_facil
+    // getClt_escolhe_facil : getClt_escolhe_facil
 }
 
 // export default getLastresults;

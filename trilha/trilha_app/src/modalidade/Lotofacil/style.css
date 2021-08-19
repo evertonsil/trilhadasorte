@@ -2,6 +2,20 @@
     .row-modalidade {
         flex-direction: column !important;
     }
+    .all-lotofacil{
+        display: flex;
+        flex-direction: column !important;
+
+    }
+    .colum-modalidade {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+.all-lotofacil{
+    display: flex;
+    flex-direction: row;
 }
 
 .modalidades {

@@ -11,9 +11,14 @@
     .table ul li {
         font-size: 1rem !important;
         margin: 1px !important;
+        width: 17px;
     }
     #pacote-premium {
         margin: 0 !important;
+    }
+    .pacote {
+    width: 310px !important;
+
     }
 }
 
@@ -157,12 +162,16 @@
     color: white;
     border: solid 3px white;
     padding: 10px;
+    width: 15px;
+
 }
 
 #pacote-medium ul li {
     color: white;
     border: solid 3px white;
     padding: 10px;
+    width: 15px;
+
 }
 
 #pacote-cheap button {}
@@ -190,6 +199,7 @@
     color: goldenrod !important;
     border: solid 3px goldenrod;
     padding: 10px;
+    width: 15px;
 }
 
 #pacote-cheap ul,

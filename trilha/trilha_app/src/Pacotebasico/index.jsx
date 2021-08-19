@@ -23,7 +23,6 @@ const PacoteBasico = ({n}) => {
 
     }
   }
-  
   return (
   <div>
     <div className="pacote-basico">
