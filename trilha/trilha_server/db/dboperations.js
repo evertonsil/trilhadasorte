@@ -1,5 +1,7 @@
 var config = require('./conect');
-var sql = require("mssql");
+// var sql = require("mssql");
+var mysql = require("mysql");
+
 // var sql = require("mysql");
 
 
@@ -12,8 +14,8 @@ async function getPuroosso(){
 
 async function getLastresults(){
     try{
-        let pool = await sql.connect(config)
-        let numbs = pool.request().query("SELECT * FROM dbo.RESULTADOS_ANTERIORES$ ORDER BY ID_RESULTADO");
+        let pool = await mysql.createConnection(config)
+        let numbs = pool.query("SELECT * FROM dbo.RESULTADOS_ANTERIORES$ ORDER BY ID_RESULTADO");
         return (await numbs).recordsets;
    }
     catch(error){
