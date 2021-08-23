@@ -1,28 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
-import brasil from "../imgs/brasil.png";
-import Numbers from "../components/Numbers";
-import Pacotes from "../components/Pacotes";
 import BtnOk from "../components/Buttons/BtnOk"
+import axios from "axios";
+
 
 const PacoteBasico = ({n}) => {
 
-  const [numbers, setNumbers] = useState([]);
+   const [game, setGame] = useState([]);
 
-  // const numchoosed = "setNumbers";
-
-  const above26 = () =>{
-    const usrInput = document.getElementById("usrInput"); 
-    if( usrInput.value >= 26 ){
-      alert('coloque um número entre 1 e 25');
-      usrInput.addEventListener("focus", function () {
-        this.style.boxShadow = "0 0 0 2pt red";  
-      });
-    } else{
-      usrInput.style.boxShadow = "0 0 0 2pt lightskyblue";  
-
-    }
+  function getLastresults(){
+    axios.get("http://localhost:3010/game/lastresult").then(
+      // axios.get("http://localhost:3010/game/cltescolhefacil").then(
+    // axios.get("http://localhost:3010/game/getjogosbons").then(
+       response => {
+         console.log(response.data + " console teste supheader ");
+         setGame(Object.keys(response.data[0][0]).map(key => response.data[0][0][key]))
+      }
+    )
   }
+  useEffect(function(){
+    getLastresults()
+  }, [])
+  
   return (
   <div>
     <div className="pacote-basico">
@@ -37,61 +36,61 @@ const PacoteBasico = ({n}) => {
       <ul>
         <li>
            {/* onInput={() => {this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')}}  */}
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"  onKeyPress={above26}/> 
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"  placeholder = {(n) => n} />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
       </ul>
       </td>
@@ -101,61 +100,61 @@ const PacoteBasico = ({n}) => {
   <td>
       <ul>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
       </ul>
       </td>
@@ -165,189 +164,61 @@ const PacoteBasico = ({n}) => {
   <td>
       <ul>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-      </ul>
-      </td>
-    <td><input type="checkbox"/></td>
-  </tr>
-  <tr>
-  <td>
-      <ul>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-      </ul>
-      </td>
-    <td><input  type="checkbox"/></td>
-  </tr>
-  <tr>
-  <td>
-      <ul>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
       </ul>
       </td>
@@ -357,125 +228,61 @@ const PacoteBasico = ({n}) => {
   <td>
       <ul>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-      </ul>
-      </td>
-    <td><input  type="checkbox"/></td>
-  </tr>
-  <tr>
-  <td>
-      <ul>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
       </ul>
       </td>
@@ -485,125 +292,61 @@ const PacoteBasico = ({n}) => {
   <td>
       <ul>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-      </ul>
-      </td>
-    <td><input  type="checkbox"/></td>
-  </tr>
-  <tr>
-  <td>
-      <ul>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
-        </li>
-        <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
       </ul>
       </td>
@@ -613,61 +356,317 @@ const PacoteBasico = ({n}) => {
   <td>
       <ul>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26}/>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
         </li>
         <li>
-          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" onKeyPress={above26} />
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+      </ul>
+      </td>
+    <td><input  type="checkbox"/></td>
+  </tr>
+  <tr>
+  <td>
+      <ul>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+      </ul>
+      </td>
+    <td><input  type="checkbox"/></td>
+  </tr>
+  <tr>
+  <td>
+      <ul>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+      </ul>
+      </td>
+    <td><input  type="checkbox"/></td>
+  </tr>
+  <tr>
+  <td>
+      <ul>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+      </ul>
+      </td>
+    <td><input type="checkbox"/></td>
+  </tr>
+  <tr>
+  <td>
+      <ul>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2" />
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
+        </li>
+        <li>
+          <input id="usrInput"  min="0" max="25" type="text" maxLength="2"/>
         </li>
       </ul>
       </td>

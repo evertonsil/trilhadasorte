@@ -1,10 +1,4 @@
 @media (max-width: 1000px) {
-    .table ul li:last-child {
-        padding: 5px 2px !important;
-        font-weight: unset !important;
-        -webkit-text-stroke-width: unset !important;
-    }
-
     .all-numbs{
         width: 100% !important;
     }
@@ -47,7 +41,7 @@
 .table ul {
     display: flex;
     justify-content: center;
-    width: 99%;
+    max-width: 300px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -77,13 +71,6 @@
     width: 28px;
     height: fit-content;
     background-color: #fff;
-}
-
-.table ul li:last-child {
-    font-size: 1rem;
-    padding: 10px 6px;
-    font-weight: 700;
-    -webkit-text-stroke-width: medium;
 }
 
 .table ul li:hover {
