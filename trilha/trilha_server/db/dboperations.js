@@ -16,8 +16,10 @@ var mysql = require("mysql");
 async function getClt_escolhe_facil(){
         try{
             let pool = config
-             pool.query("Call cliente_escolhe_facil(5,15,25,5);");
-            // return (await numbs).recordsets;
+            let numbs =  pool.query("Call cliente_escolhe_facil(5,15,25,5);");
+            console.log(numbs);
+            return (await numbs).recordsets;
+            
         }
         catch(error){
             console.log(error);

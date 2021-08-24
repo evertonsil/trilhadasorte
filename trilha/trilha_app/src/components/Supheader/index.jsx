@@ -13,6 +13,8 @@ function Supheader(){
        response => {
          console.log(response.data + " console teste supheader ");
          setGame(Object.keys(response.data[0][0]).map(key => response.data[0][0][key]))
+        //  setGame(Object.keys(response.data).map(key => response.data))
+
       }
     )
   }
