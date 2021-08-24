@@ -1,6 +1,6 @@
 var config = require('./conect');
-// var sql = require("mssql");
-var mysql = require("mysql");
+var sql = require("mssql");
+// var mysql = require("mysql");
 
 // async function getLastresults(){
 //     try{
@@ -14,14 +14,14 @@ var mysql = require("mysql");
 // }
 
 async function getClt_escolhe_facil(){
-    try{
-        let pool = await mysql.createPool(config)
-        let numbs = pool.query("Call cliente_escolhe_facil(5,15,25,5)");
-        return (await numbs).recordsets;
-   }
-    catch(error){
-        console.log(error);
-    }
+        try{
+            let pool = await sql.connect(config)
+            let numbs = pool.request().query("SELECT * FROM dbo.Jogos_bons$ ORDER BY ID_RESULTADO");
+            return (await numbs).recordsets;
+        }
+        catch(error){
+            console.log(error);
+        }
 }
 
 

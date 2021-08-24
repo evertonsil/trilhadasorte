@@ -1,11 +1,10 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import "./style.css";
 
 class Numbers extends Component {
   state = {
     num: "",
   };
-
   render() {
     const _this = this;
     window.onload = function () {
@@ -45,7 +44,7 @@ class Numbers extends Component {
         <div className="table">
           <ul id="test">
           {result.map((n) => (
-                <li>{n}</li>
+                <li><button>{n}</button></li>
               ))}
           </ul>
         </div>

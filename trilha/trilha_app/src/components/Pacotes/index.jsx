@@ -14,7 +14,7 @@ const Pacotes = ({ numbers }) => (
           </div>
           <div className="pacote-cheap-body">
             <ul id="id-packet-num">
-              {numbers.slice(0, 6).map((n) => (
+              {numbers.slice(0, 3).map((n) => (
                 <li>{n}</li>
               ))}
             </ul>
@@ -35,7 +35,7 @@ const Pacotes = ({ numbers }) => (
           </div>
           <div className="pacote-premium-body">
             <ul>
-              {numbers.slice(0, 19).map((n) => (
+              {numbers.slice(0, 3).map((n) => (
                 <li>{n}</li>
               ))}
             </ul>
@@ -55,7 +55,7 @@ const Pacotes = ({ numbers }) => (
           </div>
           <div className="pacote-premium-body">
             <ul>
-              {numbers.slice(0, 18).map((n) => (
+              {numbers.slice(0, 3).map((n) => (
                 <li>{n}</li>
               ))}
             </ul>
