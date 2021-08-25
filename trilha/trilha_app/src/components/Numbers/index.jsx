@@ -5,27 +5,15 @@ class Numbers extends Component {
   state = {
     num: "",
   };
+
+  _setNumbers(number){
+    this.props.setNumbers([...this.props.numbers, number])
+  }
+
   render() {
-    const _this = this;
-    window.onload = function () {
-      function getEventTarget(e) {
-        e = e || window.event;
-        return e.target || e.srcElement;
-      }
 
-      var ul = document.getElementById("test");
-      ul.onclick = function (event) {
-        var target = getEventTarget(event);
-        _this.props.setNumbers(_this.props.numbers.concat(target.innerHTML));
-        // alert(target.innerHTML);
-
-        if(ul.onclick){
-          // ul.style.opacity = "0.2";
-          // ul.style.cursor = "not-allowed"
-
-        }
-      };
-    };
+   
+     
 
     const range = (start, end) => {
       return Array(end - start + 1).fill().map((_, idx) => start + idx)
@@ -44,7 +32,7 @@ class Numbers extends Component {
         <div className="table">
           <ul id="test">
           {result.map((n) => (
-                <li><button>{n}</button></li>
+                <li><button onClick={() => this._setNumbers(n)}>{n}</button></li>
               ))}
           </ul>
         </div>

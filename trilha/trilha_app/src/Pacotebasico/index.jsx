@@ -27,7 +27,7 @@ const PacoteBasico = ({n}) => {
     <div className="pacote-basico">
      <table>
   <tr>
-    <th>Selecione até 19 números entre 01 e 25:</th>
+    <th>Selecione até 3 números entre 01 e 25:</th>
     <th>Completar todos<input id="Allchecks" type="checkbox"/>
     </th>
   </tr>

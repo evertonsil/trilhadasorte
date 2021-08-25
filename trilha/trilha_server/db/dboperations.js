@@ -4,7 +4,7 @@ var mysql = require("mysql");
 
 // async function getLastresults(){
 //     try{
-//         let pool = await mysql.connect(config)
+//         let pool = await sql.connect(config)
 //         let numbs = pool.query("SELECT * FROM dbo.RESULTADOS_ANTERIORES$ ORDER BY ID_RESULTADO");
 //         return (await numbs).recordsets;
 //    }
@@ -13,12 +13,33 @@ var mysql = require("mysql");
 //     }
 // }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 async function getClt_escolhe_facil(){
         try{
             let pool = config
-            let numbs =  pool.query("Call cliente_escolhe_facil(5,15,25,5);");
-            console.log(numbs);
-            return (await numbs).recordsets;
+            let query = `Call cliente_escolhe_facil( '1','2','3','1' )`
+            return new Promise((resolve, reject) => {
+                let numbs =  pool.query(query, (error, results) => {
+                    if (error) {
+                        reject(error)
+                    }
+                    console.log(results[0]);
+                    resolve(results[0]);
+                });
+            })
+            
             
         }
         catch(error){
@@ -42,6 +63,6 @@ async function getClt_escolhe_facil(){
 
 module.exports =  {
     // getJogosbons : getJogosbons,
-    // getLastresults : getLastresults,
+    // getLastresults : getLastresults
     getClt_escolhe_facil : getClt_escolhe_facil
 }

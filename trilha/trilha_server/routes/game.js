@@ -1,6 +1,6 @@
+const controller = require('../controllers/game');
 
 module.exports = app => {
-    const controller = require('../controllers/game');
   
     // app.route('/game/lastresult').get(controller.getlastresult);
     app.route('/game/cltescolhefacil').get(controller.getclt_escolhe_facil);
