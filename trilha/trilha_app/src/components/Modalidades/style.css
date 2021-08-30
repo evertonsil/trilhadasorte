@@ -32,14 +32,14 @@
     flex-wrap: wrap;
 }
 
-.colum-modalidade {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    padding: 10px;
-    margin: 10px;
-}
+    /* .colum-modalidade {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding: 10px;
+        margin: 10px;
+    } */
 
 #id-colum-modalidade-lotomania{
     opacity: 0.5;

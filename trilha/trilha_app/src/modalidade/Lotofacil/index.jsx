@@ -9,10 +9,10 @@ import axios from "axios";
 
 function Lotofacil(){
   const [game, setGame] = useState([]);
+  const [numbers, setNumbers] = useState([]);
   function getLastresults(){
     axios.get("http://localhost:3010/game/lastresult").then(
       response => {
-        console.log(response.data);
         setGame(Object.keys(response.data[0][0]).map(key => response.data[0][0][key]))
       }
     )
@@ -30,7 +30,7 @@ function Lotofacil(){
     return `${date}/${month < 10 ? `0${month}` : ` ${month}`}/${year}`;
   }
 
-  const [numbers, setNumbers] = useState([]);
+
 
   return (
     <div>

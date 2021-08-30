@@ -1,0 +1,77 @@
+@media (max-width: 600px) {
+    .pacote-premium table tr td ul{
+      justify-content: center;
+    }
+}
+
+.pacote-premium{
+    display: flex;
+    justify-content: center;
+    width: 84%;
+    align-items: center;
+    margin: 150px auto;
+    padding: 50px 0;
+    flex-direction: column;
+}
+
+table {
+   
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    text-align: center;
+    width: 80%;
+  }
+  
+  td, th {
+    text-align: left;
+    padding: 8px;
+    border: solid 0.1px rgba(51, 51, 51, 0.5);
+  }
+  tr:nth-child(odd) {
+    /* background-color: teal; */
+  }
+
+  tr:nth-child(even) {
+    background-color: #1f9cb2;
+  }
+
+  .pacote-premium table tr td {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .pacote-premium table tr th:last-child {
+    text-align: center;
+  }
+
+.pacote-premium table tr td ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+}
+
+
+.pacote-premium table tr td ul li{
+    width: auto;
+    text-align: center;
+}
+
+.pacote-premium table tr td ul li input{
+  width: 40px;
+  height: 40px;
+  margin: 6px;
+  border-radius: 10px;
+  text-align: center;
+  border: none !important;
+  outline: none !important;
+  
+}
+
+.pacote-premium table tr td ul li input:focus{
+  border: none !important;
+  outline: none !important;
+
+}

@@ -4,6 +4,7 @@ const cors = require('cors');
 const gameRoutes = require("./routes/game")
   const app = express();
   app.use(cors());
+  app.use(bodyParser.json())
   gameRoutes(app)
   // SETANDO VARIÁVEIS DA APLICAÇÃO
   app.listen(process.env.PORT || 3010, function(){

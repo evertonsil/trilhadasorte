@@ -13,6 +13,9 @@ import Cadastro from "./Cadastro";
 import Perfil from "./Perfil";
 
 import PacoteBasico from "./Pacotebasico";
+import Resultado from './Resultado'
+import PacotePremium from "./Pacotepremium";
+import PacoteMedium from "./Pacotemedium";
 
 
 
@@ -30,6 +33,9 @@ const Routes = () => (
       <Route path="/Lotomania" component={Lotomania} />
       <Route path="/Lotofacil" component={Lotofacil} />
       <Route path="/Pacotebasico" component={PacoteBasico} />
+      <Route path="/Pacotepremium" component={PacotePremium} />
+      <Route path="/Pacotemedium" component={PacoteMedium} />
+      <Route path="/Resultado" component={Resultado} />
 
       <Route
         path="*"

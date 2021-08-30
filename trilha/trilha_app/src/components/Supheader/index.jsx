@@ -7,8 +7,8 @@ import axios from "axios";
 function Supheader(){
   const [game, setGame] = useState([]);
   function getLastresults(){
-    // axios.get("http://localhost:3010/game/lastresult").then(
-      axios.get("http://localhost:3010/game/cltescolhefacil").then(
+    axios.get("http://localhost:3010/game/lastresult").then(
+      // axios.get("http://localhost:3010/game/cltescolhefacil").then(
     // axios.get("http://localhost:3010/game/getjogosbons").then(
        response => {
          console.log(response.data , " console teste supheader ");

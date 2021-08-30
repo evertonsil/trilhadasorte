@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import { Link } from 'react-router-dom'
 
 const Pacotes = ({ numbers }) => (
   <div>
@@ -24,7 +25,12 @@ const Pacotes = ({ numbers }) => (
           <div className="pacote-cheap-footer">
 
             <button id="id-btn-comprar">
-              <a href="/Pacotebasico">30 fichas</a>
+              <Link to={{
+                pathname: '/Pacotebasico',
+                state: {
+                  numbers
+                }
+              }}><a>30 fichas</a></Link>
             </button>
           </div>
         </div>
@@ -43,8 +49,13 @@ const Pacotes = ({ numbers }) => (
             <p>30 combinações por jogo até o fim do mês</p>
           </div>
           <div className="pacote-premium-footer">
-            <button id="id-btn-comprar">
-              <a href="/Pacotebasico">70 fichas</a>
+          <button id="id-btn-comprar">
+              <Link to={{
+                pathname: '/Pacotepremium',
+                state: {
+                  numbers
+                }
+              }}><a>70 fichas</a></Link>
             </button>
           </div>
         </div>
@@ -63,8 +74,13 @@ const Pacotes = ({ numbers }) => (
             <p>20 combinações por jogo até o fim do mês</p>
           </div>
           <div className="pacote-premium-footer">
-            <button id="id-btn-comprar">
-              <a href="/Pacotebasico">50 fichas</a>
+          <button id="id-btn-comprar">
+              <Link to={{
+                pathname: '/Pacotemedium',
+                state: {
+                  numbers
+                }
+              }}><a>50 fichas</a></Link>
             </button>
           </div>
         </div>

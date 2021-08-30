@@ -13,7 +13,7 @@
             // "program": "index.js",
                 // PARA CONECTAR COM O BANCO DE DADOS
                 // ABRA O BANCO DE DADOS E CONECTA, DEPOIS DESCOMENTE UMA DAS LINHAS 11, 12, 13
-                // DEPOIS EXECUTE OS CÓDIGOS ABAIXO EM ORDEM UM POR UM NO POWER SHELL  
+                // DEPOIS EXECUTE OS CÓDIGOS ABAIXO EM ORDEM UM POR VEZ NO POWER SHELL  
                 //1-             sqlps
 
                 // # Get a reference to the ManagedComputer class.

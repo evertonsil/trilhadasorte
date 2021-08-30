@@ -5,19 +5,19 @@ import axios from "axios";
 
 function Modalidades () {
   const [game, setGame] = useState([]);
-  function getLastresults(){
-    axios.get("http://localhost:3010/game/lastresult").then(
-     // axios.get("http://localhost:3010/game/cltescolhefacil").then(
-    // axios.get("http://localhost:3010/game/getjogosbons").then(
-      response => {
-        console.log(response.data + "console teste modalidades");
-        setGame(Object.keys(response.data[0][0]).map(key => response.data[0][0][key]))
-        }
-    )
-  }
-  useEffect(function(){
-    getLastresults()
-  }, [])
+  // function getLastresults(){
+  //   axios.get("http://localhost:3010/game/lastresult").then(
+  //   //  axios.get("http://localhost:3010/game/cltescolhefacil").then(
+  //   // axios.get("http://localhost:3010/game/getjogosbons").then(
+  //     response => {
+  //       console.log(response.data + "console teste modalidades");
+  //       setGame(Object.keys(response.data[0][0]).map(key => response.data[0][0][key]))
+  //       }
+  //   )
+  // }
+  // useEffect(function(){
+  //   getLastresults()
+  // }, [])
 
   function concdata() {
     let newDate = new Date();
@@ -57,83 +57,7 @@ function Modalidades () {
                       </ul>
             </div>
           </div>
-          <div className="colum-modalidade" id="id-colum-modalidade-lotomania">
-            <a href="./Lotomania">
-              <div className="modalidade-2" id="id-lotomania">
-                <div className="div-img-brasil">
-                  <img src={brasil} />
-                </div>
-                <h2>Lotomania</h2>
-              </div>
-            </a>
-            <div className="concurso">
-              <h2>Concurso</h2>
-              <span>{concdata()}</span>
-            </div>
-            <div className="resultado-loteria">
-              <ul>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-              </ul>
-            </div>
-          </div>
-          {/* <div className="colum-modalidade">
-            <a href="./Lotofacil">
-              <div className="modalidade-1" id="id-lotofacil">
-                <div className="div-img-brasil">
-                  <img src={brasil} />
-                </div>
-                <h2>Lotofácil</h2>
-              </div>
-            </a>
-            <div className="concurso">
-              <h2>Concurso</h2>
-              <span>{concdata()}</span>
-            </div>
-            <div className="resultado-loteria">
-              <ul>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-                <li>00</li>
-              </ul>
-            </div>
-          </div>
-          <div className="colum-modalidade">
+          {/* <div className="colum-modalidade" id="id-colum-modalidade-lotomania">
             <a href="./Lotomania">
               <div className="modalidade-2" id="id-lotomania">
                 <div className="div-img-brasil">

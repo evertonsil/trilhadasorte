@@ -7,19 +7,21 @@ class Numbers extends Component {
   };
 
   _setNumbers(number){
-    this.props.setNumbers([...this.props.numbers, number])
+    if (!this.props.numbers.includes(number))
+      this.props.setNumbers([...this.props.numbers, number])
+    else{
+      
+      this.props.setNumbers(numbers => numbers.filter(n => n != number))
+    }
+
+    console.log(this.props.numbers)
   }
 
   render() {
-
-   
-     
-
     const range = (start, end) => {
       return Array(end - start + 1).fill().map((_, idx) => start + idx)
     }
-    var result = range(0, 25); // [9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
-    console.log(result);
+    var result = range(1, 25);
 
     return (
       <div className="all-numbs">
@@ -31,8 +33,11 @@ class Numbers extends Component {
         </div>
         <div className="table">
           <ul id="test">
+  
           {result.map((n) => (
-                <li><button onClick={() => this._setNumbers(n)}>{n}</button></li>
+                <li><button 
+                style={{opacity: this.props.numbers.includes(n) ? '0.5' : '1'}} 
+                onClick={() => this._setNumbers(n)}>{n}</button></li>
               ))}
           </ul>
         </div>
